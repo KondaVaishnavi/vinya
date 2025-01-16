@@ -1,0 +1,31 @@
+
+.show{
+    display:none;
+    font-style:italic;
+    text-decoration:dashed;
+    text-shadow:black;
+}
+.text :hover .show{
+    display:inline-block;
+    text-align: right;
+    font-style:italic;
+    text-shadow: black;
+    text-decoration: double;
+
+
+}
+.textual{
+    border:1px;
+    padding:10px;
+    font-style:oblique;
+}
+.textual:hover{
+    box-shadow:5px 0px 25px black;
+}
+.tem{
+    text-align:right;
+}
+body{
+    background-color:#BC8F8F;
+    
+}

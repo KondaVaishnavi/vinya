@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color:black;
+    overflow: hidden;
+    position: relative;
+    font-family: Arial, sans-serif;
+}
+
+.image-container {
+    text-align: center;
+}
+
+img {
+    max-width: 300px;
+    max-height: 300px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+img:hover {
+    transform: scale(1.1);
+}
+
+.hearts-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    clip-path: polygon(50% 0%, 61% 14%, 77% 14%, 90% 26%, 90% 42%, 79% 60%, 50% 100%, 21% 60%, 10% 42%, 10% 26%, 23% 14%, 39% 14%);
+    animation: float 4s linear infinite, fade 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh) scale(0.8);
+    }
+    50% {
+        transform: translateY(50vh) scale(1);
+    }
+    100% {
+        transform: translateY(-10vh) scale(1.2);
+    }
+}
+
+@keyframes fade {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
